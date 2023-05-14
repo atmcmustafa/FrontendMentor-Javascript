@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Advice generator app</title>
+  <style>
+    .span::before {
+      position: absolute;
+      content: '';
+      height: 2px;
+      color: #000;
+      width: 50%;
+      margin-left: 10px;
+      background: #999;
+      top: 6px;
+      left: -32px;
+    }
+
+    .span::after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      color: #000;
+      width: 50%;
+      margin-left: 19px;
+      background: #999;
+      top: 6px;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-slate-700">
+  <div class="rounded-lg p-12 bg-gray-600 max-w-lg">
+    <div class="relative">
+      <p class="text-green-600 text-center mb-4 font-bold"><span id="adviceID">#111</span> </p>
+      <p id="advice" class="text-gray-400 font-bold text-center">Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Provident
+        nulla
+        praesentium
+        tempora!</p>
+      <div class="relative my-8">
+        <span class="span text-gray-300 block  text-center">
+          <img src="images/pattern-divider-desktop.svg">
+        </span>
+      </div>
+      <button id="btn" class="p-4 bg-green-400  rounded-full flex justify-center items-center mx-auto ">
+        <img src="images/icon-dice.svg">
+      </button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
