@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      background: hsl(0, 100%, 74%);
+      background-image: url(images/bg-intro-desktop.png);
+      color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div class="container mx-auto">
+    <div class="d-flex flex-column flex-md-row  justify-content-center align-items-center gap-5">
+      <div class="col-md-6 text-center text-md-start my-auto">
+        <h1 class="fw-bold  ms-auto">Learn to code by watching others</h1>
+        <p class="ms-auto"> See how experienced developers solve problems in real-time. Watching scripted tutorials
+          is
+          great,
+          but understanding how developers think is invaluable. </p>
+      </div>
+      <div class="col-md-6">
+
+        <div style="background: #5A1071;color: hsl(246, 25%, 77%); cursor: pointer;" class="card mb-3">
+          <div class="card-body">
+            <span class="fw-bold text-light"> Try it free 7 days</span> then $20/mo. thereafter
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+
+            <div class="input-group mb-3 d-flex w-100 flex-column">
+
+              <span id="errorMsg" class="text-danger text-center mb-3 ">
+              </span>
+
+              <input id="nameInput" type="text" class="form-control py-2 w-100 mb-3" placeholder="Name"
+                aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <input id="lastNameInput" type="text" class="form-control py-2 w-100 mb-3" placeholder="Last Name"
+                aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <input id="emailInput" type="text" class="form-control py-2 w-100 mb-3" placeholder="Email Adress"
+                aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <input id="passwordInput" type="text" class="form-control py-2 w-100 mb-3" placeholder="Password"
+                aria-label="Example text with button addon" aria-describedby="button-addon1">
+
+              <button id="button" style="font-size: 13px;" class="btn btn-success py-2 fw-bold rounded-2">CLAIM YOUR
+                FREE
+                TRIAL</button>
+              <small style="font-size: 12px;color: hsl(246, 25%, 77%);" class="mt-2 text-center">
+                By clicking the button, you are agreeing to our <span
+                  style="color: hsl(0, 100%, 74%) ;cursor: pointer;">
+                  Terms and Services
+                </span>
+              </small>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+  <script>
+
+    let nameInput = document.getElementById("nameInput");
+    let lastNameInput = document.getElementById("lastNameInput");
+    let emailInput = document.getElementById("emailInput");
+    let passwordInput = document.getElementById("passwordInput");
+    let submitBtn = document.getElementById("button")
+    let errorMsg = document.getElementById("errorMsg")
+
+    submitBtn.addEventListener("click", errorMessage);
+
+    function errorMessage() {
+      if (nameInput.value.length < 1 || lastNameInput.value.length < 1 || emailInput.value.length < 1 || passwordInput.value.length < 1) {
+        errorMsg.innerText = `Input fields not can be past empty`
+
+        setTimeout(() => {
+          errorMsg.innerText = "";
+        }, 2000);
+
+      }
+      else {
+        errorMsg.innerText = `Success!`;
+        errorMsg.classList.remove("text-danger");
+        errorMsg.classList.add("text-success");
+        setTimeout(() => {
+          errorMsg.innerText = "";
+          errorMsg.classList.add("text-danger");
+          errorMsg.classList.remove("text-success");
+        }, 2000);
+      }
+    }
+
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
