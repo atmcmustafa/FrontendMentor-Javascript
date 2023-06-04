@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body class="p-12 md:p-0">
+    <div class="container mx-auto">
+      <div
+        class="mt-16 flex flex-col text-center max-w-3xl justify-center mx-auto items-center"
+      >
+        <img class="w-24 md:w-48 mb-12" src="images/logo.svg" alt="logo" />
+        <h2 class="text-2xl md:text-5xl mb-6">
+          We are launching <span class="text-black font-bold">soon!</span>
+        </h2>
+        <p class="mb-6">Subscribe and get notified</p>
+        <div class="flex flex-col md:flex-row gap-8 mb-4 w-full">
+          <input
+            id="input"
+            placeholder="Your e-mail adress.."
+            class="rounded-full px-6 focus:outline-none flex-1 py-4"
+            type="email"
+            required
+          />
+          <button
+            id="button"
+            class="bg-blue-500 py-4 px-16 text-white flex justify-center items-center rounded-full shadow-2xl"
+          >
+            Notify Me
+          </button>
+        </div>
+        <!-- error log -->
+
+        <p class="error-msg text-red-600 text-lg font-bold hidden">
+          The input field is empty. Please fill in.
+        </p>
+
+        <div class="mt-6">
+          <img src="images/illustration-dashboard.png" alt="dashboard" />
+        </div>
+        <div class="flex gap-4 mt-12 mb-6">
+          <i
+            class="fa-brands fa-twitter h-10 w-10 rounded-full border border-gray-300 cursor-pointer flex items-center justify-center text-blue-600"
+          ></i>
+          <i
+            class="fa-brands fa-facebook h-10 w-10 rounded-full border border-gray-300 cursor-pointer flex items-center justify-center text-blue-600"
+          ></i>
+          <i
+            class="fa-brands fa-instagram h-10 w-10 rounded-full border border-gray-300 cursor-pointer flex items-center justify-center text-blue-600"
+          ></i>
+        </div>
+        <p class="text-gray-600">&copy; Copyright Ping. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
