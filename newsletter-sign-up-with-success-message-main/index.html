@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body
+    class="flex justify-center items-center min-h-screen"
+    style="background: hsl(235, 18%, 26%)"
+  >
+    <section
+      id="sign-up"
+      class="bg-white flex flex-col-reverse md:flex-row items-center gap-12 p-8 rounded-2xl text-lg max-w-4xl"
+    >
+      <div>
+        <h1 class="text-6xl font-bold mb-6">Stay updated!</h1>
+        <p class="mb-6">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <div class="mb-6">
+          <div>
+            <i
+              class="fas fa-check h-6 w-6 inline-flex justify-center items-center bg-orange-500 rounded-full text-white mr-3"
+            ></i>
+            <span>Product discovery and building what matters</span>
+          </div>
+          <div>
+            <i
+              class="fas fa-check h-6 w-6 inline-flex justify-center items-center bg-orange-500 rounded-full text-white mr-3"
+            ></i>
+            <span>Measuring to ensure updates are a success</span>
+          </div>
+          <div>
+            <i
+              class="fas fa-check h-6 w-6 inline-flex justify-center items-center bg-orange-500 rounded-full text-white mr-3"
+            ></i>
+            <span>And much more!</span>
+          </div>
+        </div>
+        <div class="flex flex-col w-full gap-4">
+          <div class="flex justify-between">
+            <small class="font-bold text-right">Email adress</small>
+            <small class="error-msg text-red-600 font-bold text-right hidden"
+              >Valid email requried</small
+            >
+          </div>
+          <input
+            id="input"
+            class="rounded-lg border py-3 px-4"
+            type="text"
+            placeholder="email@company.com"
+          />
+          <button
+            id="button"
+            class="bg-slate-800 text-white py-3 rounded-lg hover:bg-orange-500 hover:shadow-2xl hover:duration-300"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </div>
+      </div>
+      <div>
+        <img
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="sign-up-desktop"
+          class="w-full"
+        />
+      </div>
+    </section>
+
+    <!-- success section -->
+    <section
+      id="correctForm"
+      class="bg-white flex flex-col-reverse md:flex-row items-center gap-12 p-12 rounded-2xl text-lg max-w-xl hidden"
+    >
+      <div>
+        <i
+          class="fas fa-check h-16 w-16 inline-flex justify-center items-center bg-orange-500 rounded-full text-white mr-3 text-2xl mb-6"
+        ></i>
+        <h1 class="text-6xl font-bold mb-6">Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <span class="font-bold">ash@loremcompany.com</span>. Please open it
+          and click the button inside to confirm your subscription.
+        </p>
+        <button
+          id="dismissButton"
+          class="bg-slate-800 text-white py-3 rounded-lg hover:bg-orange-500 hover:shadow-2xl hover:duration-300 w-full mt-6"
+        >
+          Subscribe to monthly newsletter
+        </button>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
