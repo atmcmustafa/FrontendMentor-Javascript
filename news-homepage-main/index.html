@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="md:p-0 px-8 relative">
+    <header class="flex pt-16 pb-8 container mx-auto justify-between">
+      <a href="#"><img src="assets/images/logo.svg" /></a>
+      <img
+        src="assets/images/icon-menu.svg"
+        class="flex md:hidden cursor-pointer"
+        id="mobileIcon"
+      />
+      <nav class="hidden md:flex">
+        <ul class="flex gap-12 text-gray-500 text-lg">
+          <li class="hover:text-orange-600 cursor-pointer">Home</li>
+          <li class="hover:text-orange-600 cursor-pointer">New</li>
+          <li class="hover:text-orange-600 cursor-pointer">Popular</li>
+          <li class="hover:text-orange-600 cursor-pointer">Trending</li>
+          <li class="hover:text-orange-600 cursor-pointer">Categories</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- mobile menu -->
+    <div class="absolute min-h-screen w-full bg-slate-900 mobile-menu hidden">
+      <nav>
+        <img
+          id="closeButton"
+          src="assets/images/icon-menu-close.svg"
+          class="right-12 top-16 absolute cursor-pointer"
+        />
+        <ul
+          class="flex gap-12 text-white flex-col justify-center items-center mt-36 font-bold text-4xl"
+        >
+          <li class="hover:text-orange-600 cursor-pointer">Home</li>
+          <li class="hover:text-orange-600 cursor-pointer">New</li>
+          <li class="hover:text-orange-600 cursor-pointer">Popular</li>
+          <li class="hover:text-orange-600 cursor-pointer">Trending</li>
+          <li class="hover:text-orange-600 cursor-pointer">Categories</li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- content -->
+
+    <section class="container mx-auto flex flex-col md:flex-row gap-4">
+      <div class="w-full md:w-4/6">
+        <img src="assets/images/image-web-3-desktop.jpg" class="w-full" />
+
+        <div class="flex flex-col md:flex-row gap-8 md:gap-36 mt-12">
+          <h1 class="text-4xl md:text-7xl font-bold">
+            The Bright Future of Web 3.0?
+          </h1>
+          <div class="">
+            <p class="text-gray-500">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button
+              class="px-12 py-3 bg-red-500 mt-8 font-bold text-lg text-white hover:bg-slate-900 hover:duration-300"
+            >
+              READ MORE
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full md:w-2/6 bg-slate-900 p-8">
+        <h1 class="text-5xl text-yellow-400 font-bold mb-8">New</h1>
+        <div class="border-b border-gray-700 py-8">
+          <h2 class="text-white font-bold text-2xl mb-2">
+            Hydrogen VS Electric Cars
+          </h2>
+          <p class="text-gray-400 text-lg">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </div>
+        <div class="border-b border-gray-700 py-8">
+          <h2 class="text-white font-bold text-2xl mb-2">
+            The Downsides of AI Artistry
+          </h2>
+          <p class="text-gray-400 text-lg">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </div>
+        <div class="py-8">
+          <h2 class="text-white font-bold text-2xl mb-2">
+            Is VC Funding Drying Up?
+          </h2>
+          <p class="text-gray-400 text-lg">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.Private funding by VC firms is down 50% YOY. We take a
+            look at what that means.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- news -->
+    <section
+      class="container mx-auto w-full flex flex-col md:flex-row my-12 gap-8"
+    >
+      <div class="w-full md:w-2/6 flex gap-4">
+        <img src="assets/images/image-retro-pcs.jpg" />
+        <div>
+          <span class="text-gray-400 text-4xl font-bold">01</span>
+          <h1 class="my-6 text-4xl w-full font-bold">Reviving Retro PCs</h1>
+          <p class="text-gray-500">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>
+      <div class="w-full md:w-2/6 flex gap-4">
+        <img src="assets/images/image-top-laptops.jpg" />
+        <div>
+          <span class="text-gray-400 text-4xl font-bold">02</span>
+          <h1 class="my-6 text-4xl w-full font-bold">Top 10 Laptops of 2022</h1>
+          <p class="text-gray-500">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>
+      <div class="w-full md:w-2/6 flex gap-4">
+        <img src="assets/images/image-gaming-growth.jpg" />
+        <div>
+          <span class="text-gray-400 text-4xl font-bold">03</span>
+          <h1 class="my-6 text-4xl w-full font-bold">The Growth of Gaming</h1>
+          <p class="text-gray-500">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
