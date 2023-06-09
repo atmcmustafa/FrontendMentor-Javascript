@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body class="bg-red-50 p-8 md:p-0">
+    <section class="mt-12 rounded-xl bg-white container mx-auto max-w-4xl p-8">
+      <div class="flex justify-between items-center">
+        <div class="flex gap-4">
+          <h1 class="text-2xl font-bold">Notifications</h1>
+          <span
+            id="notificationNumber"
+            class="bg-blue-800 p-2 px-3 text-white rounded-full"
+            >4</span
+          >
+        </div>
+        <div class="flex gap-4">
+          <p
+            id="readed"
+            class="text-gray-500 cursor-pointer hover:text-gray-700"
+          >
+            Mark all as read
+          </p>
+          <p
+            id="deleteAll"
+            class="text-gray-500 cursor-pointer hover:text-gray-700"
+          >
+            Delete All
+          </p>
+        </div>
+      </div>
+
+      <!-- notifications container -->
+
+      <div class="mt-6 flex flex-col gap-4">
+        <!-- notification 1  -->
+        <div
+          class="rounded-xl flex gap-8 bg-gray-100 items-center p-4 notifications"
+        >
+          <img src="assets/images/avatar-mark-webber.webp" class="w-16 h-16" />
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <p>
+                <span class="font-bold">Mark Webber</span> reacted to your
+                recent post My first tournament today!
+              </p>
+              <span
+                class="bg-orange-600 h-4 w-4 rounded-full inline-block ml-4 orangeBar"
+              ></span>
+            </div>
+            <p class="text-gray-600 mt-2">1m Ago</p>
+          </div>
+        </div>
+        <!-- notification 1  end-->
+        <!-- notification 1  -->
+        <div
+          class="rounded-xl flex gap-8 bg-gray-100 items-center p-4 notifications"
+        >
+          <img src="assets/images/avatar-angela-gray.webp" class="w-16 h-16" />
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <p><span class="font-bold">Angela Gray</span> followed you</p>
+              <span
+                class="bg-orange-600 h-4 w-4 rounded-full block ml-4 orangeBar"
+              ></span>
+            </div>
+            <p class="text-gray-600 mt-2">5m Ago</p>
+          </div>
+        </div>
+        <!-- notification 1  end-->
+        <!-- notification 1  -->
+        <div
+          class="rounded-xl flex gap-8 bg-gray-100 items-center p-4 notifications"
+        >
+          <img
+            src="assets/images/avatar-jacob-thompson.webp"
+            class="w-16 h-16"
+          />
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <p>
+                <span class="font-bold">Jacob Thompson</span> has joined your
+                group Chess Club
+              </p>
+              <span
+                class="bg-orange-600 h-4 w-4 rounded-full block ml-4 orangeBar"
+              ></span>
+            </div>
+            <p class="text-gray-600 mt-2">20m Ago</p>
+          </div>
+        </div>
+        <!-- notification 1  end-->
+        <!-- notification 1  -->
+        <div
+          class="rounded-xl flex gap-8 bg-gray-100 items-center p-4 notifications"
+        >
+          <img
+            src="assets/images/avatar-rizky-hasanuddin.webp"
+            class="w-16 h-16"
+          />
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <p>
+                <span class="font-bold">Rizky Hasanuddin</span> sent you a
+                private message
+              </p>
+              <span
+                class="bg-orange-600 h-4 w-4 rounded-full block ml-4 orangeBar"
+              ></span>
+            </div>
+            <p class="text-gray-600 mt-2">1 days Ago</p>
+          </div>
+        </div>
+        <!-- notification 1  end-->
+        <!-- notification 1  -->
+        <div class="rounded-xl flex gap-8 items-center p-4 notifications">
+          <img
+            src="assets/images/avatar-kimberly-smith.webp"
+            class="w-16 h-16"
+          />
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <p>
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p>
+            </div>
+            <p class="text-gray-600 mt-2">5 days ago</p>
+          </div>
+        </div>
+        <!-- notification 1  end-->
+        <!-- notification 1  -->
+        <div class="rounded-xl flex gap-8 items-center p-4 notifications">
+          <img
+            src="assets/images/avatar-nathan-peterson.webp"
+            class="w-16 h-16"
+          />
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <p>
+                <span class="font-bold">Mark Webber</span> reacted to your
+                recent post My first tournament today!
+              </p>
+            </div>
+            <p class="text-gray-600 mt-2">2 weeks ago</p>
+          </div>
+        </div>
+        <!-- notification 1  end-->
+        <!-- notification 1  -->
+        <div class="rounded-xl flex gap-8 items-center p-4 notifications">
+          <img src="assets/images/avatar-anna-kim.webp" class="w-16 h-16" />
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <p>
+                <span class="font-bold">Nathan Peterson</span> reacted to your
+                recent post 5 end-game strategies to increase your win rate
+              </p>
+            </div>
+            <p class="text-gray-600 mt-2">2 weeks ago</p>
+          </div>
+        </div>
+        <!-- notification 1  end-->
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
