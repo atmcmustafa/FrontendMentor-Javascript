@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    style="background: hsl(27, 66%, 92%)"
+    class="flex justify-center items-center min-h-screen p-8 md:p-0"
+  >
+    <section class="flex flex-col gap-4 max-w-2xl container mx-auto">
+      <div
+        class="flex rounded-2xl justify-between p-8 bg-orange-400 w-full text-white"
+      >
+        <div class="flex flex-col">
+          <span>My Balance</span>
+          <span class="text-3xl font-bold">$921.48</span>
+        </div>
+        <img src="images/logo.svg" />
+      </div>
+
+      <!-- spending bar -->
+      <div class="flex flex-col gap-8 bg-white shadow-2xl p-8 rounded-2xl">
+        <h1 class="text-3xl font-bold text-black">Spending - Last 7 days</h1>
+
+        <div
+          class="flex gap-6 items-end justify-center md:justify-between mt-12 border-b border-gray-300 py-8"
+        >
+          <!-- item 1  -->
+          <div class="flex flex-col relative showDollarContainer">
+            <span
+              class="h-12 w-12 rounded-lg bg-orange-500 inline-block hover:bg-cyan-700 hover:duration-300 cursor-pointer"
+            ></span>
+            <span class="inline-block w-12 text-center mt-2">Mon</span>
+            <span
+              class="absolute -top-12 p-2 bg-black justify-center items-center w-full rounded-lg text-white showDollar"
+            ></span>
+          </div>
+          <!-- item 1 end -->
+          <!-- item 1  -->
+          <div class="flex flex-col relative showDollarContainer">
+            <span
+              class="h-24 w-12 rounded-lg bg-orange-500 inline-block hover:bg-cyan-700 hover:duration-300 cursor-pointer"
+            ></span>
+            <span class="inline-block w-12 text-center mt-2">Tue</span>
+            <span
+              class="absolute -top-12 p-2 bg-black justify-center items-center w-full rounded-lg text-white showDollar"
+            ></span>
+          </div>
+          <!-- item 1 end -->
+          <!-- item 1  -->
+          <div class="flex flex-col relative showDollarContainer">
+            <span
+              class="h-40 w-12 rounded-lg bg-orange-500 inline-block hover:bg-cyan-700 hover:duration-300 cursor-pointer"
+            ></span>
+            <span class="inline-block w-12 text-center mt-2">Wed</span>
+            <span
+              class="absolute -top-12 p-2 bg-black justify-center items-center w-full rounded-lg text-white showDollar"
+            ></span>
+          </div>
+          <!-- item 1 end -->
+          <!-- item 1  -->
+          <div class="flex flex-col relative showDollarContainer">
+            <span
+              class="h-20 w-12 rounded-lg bg-orange-500 inline-block hover:bg-cyan-700 hover:duration-300 cursor-pointer"
+            ></span>
+            <span class="inline-block w-12 text-center mt-2">Thu</span>
+            <span
+              class="absolute -top-12 p-2 bg-black justify-center items-center w-full rounded-lg text-white showDollar"
+            ></span>
+          </div>
+          <!-- item 1 end -->
+          <!-- item 1  -->
+          <div class="flex flex-col relative showDollarContainer">
+            <span
+              class="h-16 w-12 rounded-lg bg-orange-500 inline-block hover:bg-cyan-700 hover:duration-300 cursor-pointer"
+            ></span>
+            <span class="inline-block w-12 text-center mt-2">Fri</span>
+            <span
+              class="absolute -top-12 p-2 bg-black justify-center items-center w-full rounded-lg text-white showDollar"
+            ></span>
+          </div>
+          <!-- item 1 end -->
+          <!-- item 1  -->
+          <div class="flex flex-col relative showDollarContainer">
+            <span
+              class="h-32 w-12 rounded-lg bg-orange-500 inline-block hover:bg-cyan-700 hover:duration-300 cursor-pointer"
+            ></span>
+            <span class="inline-block w-12 text-center mt-2">Sat</span>
+            <span
+              class="absolute -top-12 p-2 bg-black justify-center items-center w-full rounded-lg text-white showDollar"
+            ></span>
+          </div>
+          <!-- item 1 end -->
+          <!-- item 1  -->
+          <div class="flex flex-col relative showDollarContainer">
+            <span
+              class="h-28 w-12 rounded-lg bg-orange-500 inline-block hover:bg-cyan-700 hover:duration-300 cursor-pointer"
+            ></span>
+            <span class="inline-block w-12 text-center mt-2">Sun</span>
+            <span
+              class="absolute -top-12 p-2 bg-black justify-center items-center w-full rounded-lg text-white showDollar"
+            ></span>
+          </div>
+          <!-- item 1 end -->
+        </div>
+
+        <!-- total this months  -->
+        <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <span class="text-gray-500 text-lg">Total this month</span>
+            <h2 class="text-4xl font-bold">$478.33</h2>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-lg text-end font-bold">+2.4%</span>
+            <h2 class="text-gray-500 text-lg">from last month</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- script -->
+    <script src="app.js"></script>
+  </body>
+</html>
