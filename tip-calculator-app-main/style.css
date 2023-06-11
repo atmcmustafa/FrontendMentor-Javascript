@@ -1,0 +1,41 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+input {
+    outline: 0;
+    border: 1px solid rgb(21 128 61) ;
+    border-radius: 5px !important;
+    padding-left: 2rem/* 32px */ !important;
+    padding-right: 2rem/* 32px */ !important;
+    padding-left: 2rem/* 32px */ !important;
+    padding-right: 2rem/* 32px */ !important;
+}
+
+input:focus {
+    outline: 0;
+    border: 1px solid hsl(172, 67%, 45%) !important;
+}
+
+button {
+   background: hsl(183, 100%, 15%) !important;
+}
+
+button:hover {
+    background: hsl(172, 67%, 45%) !important;
+    color: #000 !important;
+}
+
+.btn-primary {
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    color: rgba(255,255,255,.9);
+    font-size: 1.125rem/* 18px */;
+    line-height: 1.75rem/* 28px */;
+    width: 8rem/* 128px */
+}
