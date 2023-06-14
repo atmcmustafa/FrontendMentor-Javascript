@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-900 p-8 md:p-0">
+    <section
+      class="container mx-auto text-white md:mt-24 w-full flex flex-wrap gap-4 justify-center"
+    >
+      <!-- card 1  -->
+      <div
+        class="max-w-[300px] md:h-[33rem] flex flex-col w-full bg-indigo-700 rounded-xl"
+      >
+        <div class="bg-indigo-700 rounded-xl p-6 w-full md:mb-32">
+          <img
+            src="images/image-jeremy.png"
+            class="w-16 border-[3px] border-white mb-6 rounded-full"
+          />
+          <span>Report for</span>
+          <h1 class="text-3xl mb-1">
+            Jeremy <br class="md:block hidden" />
+            Robson
+          </h1>
+        </div>
+        <div
+          style="background: hsl(226, 43%, 10%)"
+          class="rounded-b-xl p-6 h-fit md:h-full text-lg"
+        >
+          <ul class="flex md:block gap-8 justify-center">
+            <li>
+              <a
+                id="daily"
+                href="#"
+                class="text-gray-400 hover:text-white active"
+                >Daily</a
+              >
+            </li>
+            <li>
+              <a id="weekly" href="#" class="text-gray-400 hover:text-white"
+                >Weekly</a
+              >
+            </li>
+            <li>
+              <a id="monthly" href="#" class="text-gray-400 hover:text-white"
+                >Monthly</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- card container -->
+      <div
+        class="z-10 w-full md:w-2/3 flex flex-wrap gap-4 card-container justify-center"
+      ></div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
