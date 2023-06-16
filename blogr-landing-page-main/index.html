@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Blogr]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Ubuntu", sans-serif !important;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Overpass", sans-serif !important;
+      }
+      .light-red-text {
+        color: hsl(356, 100%, 66%);
+      }
+      .light-red-bg {
+        /* background: hsl(356, 100%, 66%); */
+        background: #ff846c;
+      }
+
+      .btn-white {
+        @apply px-10 py-3 rounded-full font-bold bg-white;
+      }
+
+      .hero-sec {
+        background-image: url(images/bg-pattern-intro-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .bg-grayish {
+        background: #3d4062;
+      }
+      .bg-dark-gray {
+        background: #25252c;
+      }
+
+      .dropdown-container:hover .dropdown-menu {
+        display: block;
+        flex-direction: column;
+      }
+    </style>
+    <link rel="stylesheet" type="text/tailwindcss" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <div class="py-8 light-red-bg text-white text-lg font-bold">
+      <header
+        class="flex justify-between container mx-auto items-center px-6 lg:px-0"
+      >
+        <div class="flex gap-16 items-center justify-between lg:justify-normal">
+          <a href="#"><img src="images/logo.svg" alt="logo" /></a>
+
+          <nav class="hidden lg:flex">
+            <ul class="flex gap-6 items-center">
+              <a href="#">
+                <li>Product <i class="fas fa-chevron-down text-sm"></i></li
+              ></a>
+              <a href="#">
+                <li>Company <i class="fas fa-chevron-down text-sm"></i></li
+              ></a>
+              <a class="relative block" href="#">
+                <li class="dropdown-container">
+                  Connect <i class="fas fa-chevron-down text-sm"></i>
+
+                  <div
+                    class="absolute bg-white rounded-md w-40 py-4 z-20 text-gray-500 dropdown-menu hidden"
+                  >
+                    <a class="ml-4 mb-4 block" href="#">Contact</a>
+                    <a class="ml-4 mb-4 block" href="#">Newsletter</a>
+                    <a class="ml-4 block" href="#">LinkedIn</a>
+                  </div>
+                </li></a
+              >
+            </ul>
+          </nav>
+        </div>
+        <div class="gap-6 items-center hidden lg:flex">
+          <a href="#">Login</a>
+          <a
+            class="btn-white light-red-text btn-white light-red-text hover:bg-white/20 hover:duration-300 hover:text-white"
+            href="#"
+            >Sign Up</a
+          >
+        </div>
+        <!-- hamburger menu -->
+        <div id="hamburger" class="block lg:hidden" href="#">
+          <img src="images/icon-hamburger.svg" alt="menu" />
+        </div>
+      </header>
+
+      <!-- mobile menu -->
+      <div
+        class="mx-6 flex justify-center items-center bg-white text-black mt-8 rounded-md mobileNav hidden"
+      >
+        <nav class="flex flex-col w-full p-8">
+          <ul class="flex flex-col my-6 items-center">
+            <a href="#">
+              <li class="mb-3">
+                Product <i class="fas fa-chevron-down text-sm"></i></li
+            ></a>
+            <a href="#">
+              <li class="mb-3">
+                Company <i class="fas fa-chevron-down text-sm"></i></li
+            ></a>
+            <a class="relative block" href="#">
+              <li class="dropdown-container">
+                Connect <i class="fas fa-chevron-down text-sm"></i></li
+            ></a>
+            <!-- dropdown -->
+            <div
+              class="bg-gray-200 text-gray-700 text-center gap-2 flex flex-col w-full my-6 rounded-md"
+            >
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+
+            <div
+              class="py-6 border-t w-full mx-auto flex justify-center items-center flex-col"
+            >
+              <a href="#">Login</a>
+              <a
+                class="text-white hover:bg-white/20 hover:duration-300 light-red-bg px-8 py-3 rounded-full block mt-4"
+                href="#"
+                >Sign Up</a
+              >
+            </div>
+          </ul>
+        </nav>
+      </div>
+      <!-- mobile menu -->
+    </div>
+
+    <!-- navbar end -->
+
+    <!-- hero section -->
+
+    <section
+      class="hero-sec light-red-bg w-full text-center py-36 relative rounded-bl-[80px]"
+    >
+      <div class="flex flex-col gap-6 container mx-auto">
+        <h1 class="text-white text-7xl w-full font-bold">
+          A modern publishing platform
+        </h1>
+        <p class="text-gray-200 text-xl">
+          Grow your audience and build your online brand
+        </p>
+        <div class="flex gap-6 items-center mx-auto">
+          <a
+            class="btn-white light-red-text hover:bg-white/20 hover:duration-300 hover:text-white"
+            href="#"
+            >Start For Free</a
+          >
+          <a
+            class="border bg-transparent text-white px-10 py-3 rounded-full font-bold hover:bg-white hover:duration-300 hover:text-orange-500"
+            href="#"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- designed for future -->
+    <h2 class="text-4xl text-gray-800 w-full font-bold text-center mt-32">
+      Designed for the future
+    </h2>
+    <div
+      class="relative flex lg:block flex-col-reverse justify-center lg:flex-row w-full overflow-x-hidden mt-12 lg:mt-24 min-h-screen px-6 lg:px-0 text-center lg:text-start"
+    >
+      <section class="flex flex-col container mx-auto my-auto lg:mt-40">
+        <div class="w-full lg:w-1/2 paragraph">
+          <h3 class="text-3xl text-gray-700 font-bold mb-8">
+            Introducing an extensible editor
+          </h3>
+          <p class="text-gray-600 text-lg">
+            Blogr features an exceedingly intuitive interface which lets you
+            focus on one thing: creating content. The editor supports management
+            of multiple blogs and allows easy manipulation of embeds such as
+            images, videos, and Markdown. Extensibility with plugins and themes
+            provide easy ways to add functionality or change the looks of a
+            blog.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2 paragraph mt-20">
+          <h3 class="text-3xl text-gray-700 font-bold mb-8">
+            Robust content management
+          </h3>
+          <p class="text-gray-600 text-lg">
+            Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized
+            categories, sections, format, or flow. With this functionality,
+            you’re in full control.
+          </p>
+        </div>
+      </section>
+
+      <div
+        class="absolute -right-48 top-0 h-full overflow-x-hidden overflow-y-hidden hidden lg:block"
+      >
+        <img src="images/illustration-editor-desktop.svg" />
+      </div>
+      <div class="block lg:hidden mx-auto mb-12">
+        <img src="images/illustration-editor-mobile.svg" />
+      </div>
+    </div>
+    <!-- designed for future end-->
+
+    <!-- state of  -->
+    <section
+      class="w-full h-[420px] bg-red-500 mt-24 bg-grayish rounded-tr-[80px] rounded-bl-[80px] relative overflow-hidden flex flex-col text-center lg:text-start"
+    >
+      <img
+        src="images/bg-pattern-circles.svg"
+        class="absolute left-0 top-0 z-10 overflow-hidden lg:hidden block"
+      />
+      <img
+        src="images/bg-pattern-circles.svg"
+        class="absolute left-0 -top-32 z-10 overflow-hidden lg:block hidden"
+      />
+      <div class="container mx-auto flex justify-center">
+        <img
+          src="images/illustration-phones.svg"
+          class="z-20 lg:block hidden"
+        />
+        <div
+          class="flex items-center flex-col lg:mt-40 z-20 px-6 lg:px-0 mt-24"
+        >
+          <h2 class="text-4xl mb-6 text-white font-bold">
+            State of the Art Infrastructure
+          </h2>
+          <p class="text-gray-300 text-lg">
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- state of  -->
+
+    <!-- options start -->
+    <!-- designed for future -->
+    <div
+      class="relative w-full flex flex-col-reverse lg:flex-row px-6 lg:px-0 overflow-x-hidden mt-16 lg:mt-48 h-full min-h-screen text-center lg:text-start"
+    >
+      <section
+        class="flex flex-col justify-start items-end container mx-auto my-auto"
+      >
+        <div class="w-full lg:w-1/2 paragraph">
+          <h3 class="text-3xl text-gray-700 font-bold mb-8">
+            Free, open, simple
+          </h3>
+          <p class="text-gray-600 text-lg">
+            Blogr features an exceedingly intuitive interface which lets you
+            focus on one thing: creating content. The editor supports management
+            of multiple blogs and allows easy manipulation of embeds such as
+            images, videos, and Markdown. Extensibility with plugins and themes
+            provide easy ways to add functionality or change the looks of a
+            blog.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2 paragraph mt-20">
+          <h3 class="text-3xl text-gray-700 font-bold mb-8">
+            Powerful tooling
+          </h3>
+          <p class="text-gray-600 text-lg">
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </div>
+      </section>
+
+      <div
+        class="absolute -left-48 top-0 overflow-y-hidden h-full hidden lg:block"
+      >
+        <img class="w-full" src="images/illustration-laptop-desktop.svg" />
+      </div>
+      <div class="block lg:hidden mx-auto">
+        <img src="images/illustration-editor-mobile.svg" />
+      </div>
+    </div>
+
+    <!-- options end -->
+
+    <!-- footer start -->
+    <footer
+      class="bg-dark-gray rounded-tr-[80px] w-full py-20 lg:py-48 mt-24 text-white"
+    >
+      <div class="flex flex-col lg:flex-row w-full container mx-auto">
+        <div class="w-full lg:w-1/4 flex justify-center lg:block">
+          <img src="images/logo.svg" />
+        </div>
+        <div
+          class="w-full lg:w-1/4 flex items-center flex-col lg:block mt-16 lg:mt-0 text-center lg:text-start"
+        >
+          <h2 class="mb-8 text-2xl font-bold">Product</h2>
+          <ul class="flex gap-3 flex-col text-gray-300">
+            <a href="#"> <li>Overview</li></a>
+            <a href="#"> <li>Pricing</li></a>
+            <a href="#"> <li>Marketplace</li></a>
+            <a href="#"> <li>Features</li></a>
+            <a href="#"> <li>Integrations</li></a>
+          </ul>
+        </div>
+        <div
+          class="w-full lg:w-1/4 flex items-center flex-col lg:block mt-16 lg:mt-0 text-center lg:text-start"
+        >
+          <h2 class="mb-8 text-2xl font-bold">Company</h2>
+          <ul class="flex gap-3 flex-col text-gray-300">
+            <a href="#"> <li>About</li></a>
+            <a href="#"> <li>Team</li></a>
+            <a href="#"> <li>Blog</li></a>
+            <a href="#"> <li>Careers</li></a>
+          </ul>
+        </div>
+        <div
+          class="w-full lg:w-1/4 flex items-center flex-col lg:block mt-16 lg:mt-0 text-center lg:text-start"
+        >
+          <h2 class="mb-8 text-2xl font-bold">Connect</h2>
+          <ul class="flex gap-3 flex-col text-gray-300">
+            <a href="#"> <li>Contact</li></a>
+            <a href="#"> <li>Newsletter</li></a>
+            <a href="#"> <li>LinkedIn</li></a>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <script src="app.js"></script>
+  </body>
+</html>
