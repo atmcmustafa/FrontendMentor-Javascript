@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Epilogue', sans-serif;
+}
+
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-container:hover .dropdown-menu {
+    display: block;
+
+}
+
+
+.mobile-dropdown-menu {
+    display: none;
+}
+
+.mobile-dropdown-container:hover .mobile-dropdown-menu {
+    display: block;
+    transition: all 500ms ease-in;
+}

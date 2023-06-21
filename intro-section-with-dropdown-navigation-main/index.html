@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="overflow-auto md:overflow-hidden px-8 md:p-0">
+    <!-- mobile navigation -->
+    <div
+      class="absolute right-0 top-0 bg-gray-100 h-screen w-1/2 md:hidden mobile-navigation-container hidden"
+    >
+      <img
+        class="absolute top-12 right-12 close-menu cursor-pointer"
+        src="images/icon-close-menu.svg"
+      />
+
+      <div class="flex flex-col gap-4 absolute top-36 w-full p-8">
+        <nav class="w-full">
+          <ul class="flex flex-col gap-4">
+            <li class="mobile-dropdown-container">
+              <a
+                href="#"
+                class="flex items-center gap-2 text-gray-600 hover:text-black font-bold"
+                >Features
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <!-- dropdown -->
+              <div class="w-full mobile-dropdown-menu ml-8 mt-4">
+                <div class="w-full features-nav">
+                  <ul class="w-full">
+                    <li class="flex gap-4 items-center my-3 w-full">
+                      <img src="images/icon-todo.svg" />
+                      <a class="block w-full" href="#">Todo List</a>
+                    </li>
+                    <li class="flex gap-4 items-center my-6">
+                      <img src="images/icon-calendar.svg" />
+                      <a class="block w-full" href="#">Calendar</a>
+                    </li>
+                    <li class="flex gap-4 items-center my-6">
+                      <img src="images/icon-reminders.svg" />
+                      <a class="block w-full" href="#">Reminders</a>
+                    </li>
+                    <li class="flex gap-4 items-center my-4">
+                      <img src="images/icon-planning.svg" />
+                      <a class="block w-full" href="#">Planning</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- mobile dropdown end -->
+            </li>
+            <li class="mobile-dropdown-container">
+              <a
+                href="#"
+                class="flex items-center gap-2 text-gray-600 hover:text-black font-bold"
+                >Company
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <!-- dropdown -->
+              <div class="w-full mobile-dropdown-menu company ml-8 mt-4">
+                <div class="w-full">
+                  <ul class="w-full">
+                    <li class="flex gap-4 items-center my-3 w-full">
+                      <a class="block w-full" href="#">History</a>
+                    </li>
+                    <li class="flex gap-4 items-center my-6">
+                      <a class="block w-full" href="#">Our Team</a>
+                    </li>
+                    <li class="flex gap-4 items-center my-6">
+                      <a class="block w-full" href="#">Blog</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- mobile dropdown end -->
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center gap-2 text-gray-600 hover:text-black font-bold"
+                >Careers
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center gap-2 text-gray-600 hover:text-black font-bold"
+                >About
+              </a>
+            </li>
+          </ul>
+
+          <div
+            class="flex flex-col gap-4 mt-8 justify-center items-center text-gray-600"
+          >
+            <a href="#">Login</a>
+            <a
+              class="border border-black block w-full text-center py-2 rounded-2xl"
+              href="#"
+              >Register</a
+            >
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- mobile navigation end -->
+    <header class="container mx-auto pt-8 relative">
+      <!-- mobile menu -->
+      <div class="justify-between items-center flex md:hidden">
+        <a href="#"><img src="images/logo.svg" alt="logo" /></a>
+        <img class="menu-icon cursor-pointer" src="images/icon-menu.svg" />
+      </div>
+      <!-- mobile menu -->
+      <nav class="justify-between items-center hidden md:flex">
+        <ul class="flex gap-8">
+          <li class="mr-6">
+            <a href="#"><img src="images/logo.svg" alt="logo" /></a>
+          </li>
+          <li class="relative dropdown-container">
+            <a
+              href="#"
+              class="dropdown-item flex items-center gap-2 text-gray-600 hover:text-black"
+              >Features
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <!-- dropdown -->
+            <div
+              class="dropdown-menu hidden bg-white p-6 shadow-2xl flex flex-col gap-4 mt-6 absolute top-0 w-48 rounded-xl -left-16"
+            >
+              <ul class="flex flex-col gap-4">
+                <li class="flex gap-3 items-center">
+                  <img src="images/icon-todo.svg" class="w-6" />
+                  <a href="#">Todo List</a>
+                </li>
+                <li class="flex gap-3 items-center">
+                  <img src="images/icon-calendar.svg" class="w-6" />
+                  <a href="#">Calendar</a>
+                </li>
+                <li class="flex gap-3 items-center">
+                  <img src="images/icon-reminders.svg" class="w-6" />
+                  <a href="#">Reminders</a>
+                </li>
+                <li class="flex gap-3 items-center">
+                  <img src="images/icon-planning.svg" class="w-6" />
+                  <a href="#">Planning</a>
+                </li>
+              </ul>
+            </div>
+            <!-- dropdown end -->
+          </li>
+          <li class="relative dropdown-container">
+            <a
+              href="#"
+              class="flex items-center gap-2 text-gray-600 hover:text-black"
+              >Company <i class="fas fa-chevron-down"></i>
+            </a>
+
+            <!-- dropdown 2-->
+            <div
+              class="dropdown-menu hidden bg-white p-6 shadow-2xl flex flex-col gap-4 mt-6 absolute top-0 w-48 rounded-xl -left-8"
+            >
+              <ul
+                class="flex flex-col gap-4 text-gray-500 justify-center my-auto"
+              >
+                <li class="flex gap-3 items-center">
+                  <a href="#">History</a>
+                </li>
+                <li class="flex gap-3 items-center">
+                  <a href="#">Our Team</a>
+                </li>
+                <li class="flex gap-3 items-center">
+                  <a href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <!-- dropdown end -->
+          </li>
+          <li>
+            <a href="#" class="text-gray-600 hover:text-black">Careers</a>
+          </li>
+          <li><a href="#" class="text-gray-600 hover:text-black">About</a></li>
+        </ul>
+        <div>
+          <a
+            class="hover:border hover:duration-300 hover:border-black p-3 rounded-xl mr-3"
+            href="#"
+            >Login</a
+          >
+          <a
+            class="border hover:duration-300 border-gray-400 hover:border-black p-3 rounded-xl mr-3"
+            href="#"
+            >Register</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- hero section start -->
+    <section
+      class="container mx-auto flex flex-col-reverse md:flex-row items-center"
+    >
+      <div
+        class="w-full md:w-1/2 ml-0 text-center md:text-start md:ml-36 flex flex-col"
+      >
+        <h1 class="text-3xl md:text-7xl mt-8 md:mt-0 mb-4 md:mb-16 font-bold">
+          Make <br class="md:block hidden" />
+          remote work
+        </h1>
+        <p class="text-gray-500 w-full md:w-2/3">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button
+          class="hover:border hover:duration-300 bg-black font-bold text-white hover:border-black hover:bg-transparent hover:text-black px-4 py-3 rounded-xl mr-3 my-4 md:mt-8 md:w-fit"
+          href="#"
+        >
+          Learn More
+        </button>
+
+        <div
+          class="flex gap-3 md:gap-8 mt-4 md:mt-16 w-full flex-wrap justify-center md:justify-start"
+        >
+          <img class="object-contain" src="images/client-databiz.svg" />
+          <img class="object-contain" src="images/client-audiophile.svg" />
+          <img class="object-contain" src="images/client-meet.svg" />
+          <img class="object-contain" src="images/client-maker.svg" />
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2">
+        <img
+          class="object-contain hidden md:flex p-24"
+          src="images/image-hero-desktop.png"
+        />
+        <img
+          class="object-contain flex md:hidden"
+          src="images/image-hero-mobile.png"
+        />
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
